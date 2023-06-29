@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Start",
+            "preLaunchTask": "",
+            "runtimeExecutable": "deno",
+            "runtimeArgs": [
+                "--inspect-wait",
+                "--allow-net"
+            ],
+            "program": "${workspaceFolder}/index.ts",
+        }
+    ]
+}
