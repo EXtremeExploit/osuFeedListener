@@ -1,5 +1,4 @@
-import { FeedListener } from './listener.ts';
-import { AchievementEvent } from './types.ts';
+import { FeedListener, AchievementEvent } from './listener.ts';
 import { LOG } from './util.ts';
 
 const CLIENT_ID = Deno.env.get('CLIENT_ID');
@@ -27,6 +26,5 @@ async function getEvents() {
     });
 }
 
-LOG("Listening... :eyes:");
 await getEvents();
 setInterval(getEvents, 10000);

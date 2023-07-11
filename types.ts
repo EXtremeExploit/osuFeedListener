@@ -109,8 +109,8 @@ export interface UsernameChangeEvent extends FeedEvent {
 
 export type FeedEvent = {
     created_at: string;
-    id: number,
-    type: EventType
+    id: number;
+    type: EventType;
 }
 
 export type EventsResponse = {

@@ -1,4 +1,5 @@
 import { EventsResponse } from "./types.ts";
+export * from './types.ts';
 
 export class FeedListener {
     client_id: string;
@@ -16,8 +17,6 @@ export class FeedListener {
      * Requests a guerst token and stores it
      */
     async requestToken(): Promise<void> {
-        const url = new URL('https://osu.ppy.sh/oauth/token');
-
         const data = {
             "client_id": this.client_id,
             "client_secret": this.client_secret,
@@ -25,7 +24,7 @@ export class FeedListener {
             "scope": "public"
         };
 
-        const req = await fetch(url, {
+        const req = await fetch('https://osu.ppy.sh/oauth/token', {
             method: 'POST',
             headers: {
                 "Accept": "application/json",
